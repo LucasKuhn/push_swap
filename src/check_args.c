@@ -1,12 +1,12 @@
 #include "./push_swap.h"
 
-void	exit_error()
+void	exit_error(void)
 {
 	write(STDERR_FILENO, "Error\n", 6);
-	exit(EXIT_FAILURE) ;
+	exit(EXIT_FAILURE);
 }
 
-int str_is_int(const char *str)
+int	str_is_int(const char *str)
 {
 	long	number;
 	int		i;
@@ -28,25 +28,25 @@ int str_is_int(const char *str)
 	return (1);
 }
 
-int arr_includes(int *arr, int num)
+int	arr_includes(int *arr, int num)
 {
-	while(*arr)
+	while (*arr)
 	{
 		if (*arr == num)
-			return(1);
+			return (1);
 		arr++;
 	}
 	return (0);
 }
 
-void check_args(int argc, char const *argv[])
+void	check_args(int argc, char const *argv[])
 {
-	int	*arr;
+	int *arr;
 	int i;
 	int num;
 
 	i = 1;
-	while(i < argc)
+	while (i < argc)
 	{
 		if (!str_is_int(argv[i]))
 			exit_error();
@@ -54,7 +54,7 @@ void check_args(int argc, char const *argv[])
 	}
 	arr = malloc(sizeof(int) * (argc + 1));
 	i = 1;
-	while(i < argc)
+	while (i < argc)
 	{
 		num = ft_atoi(argv[i]);
 		if (arr_includes(arr, num))
