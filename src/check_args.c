@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_args.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalex-ku <lalex-ku@42sp.org.br>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/29 10:43:07 by lalex-ku          #+#    #+#             */
+/*   Updated: 2022/03/29 11:06:10 by lalex-ku         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "./push_swap.h"
 
 void	exit_error(void)
@@ -41,9 +53,9 @@ int	arr_includes(int *arr, int num)
 
 void	check_args(int argc, char const *argv[])
 {
-	int *arr;
-	int i;
-	int num;
+	int	*arr;
+	int	i;
+	int	num;
 
 	i = 1;
 	while (i < argc)

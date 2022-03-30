@@ -1,5 +1,7 @@
 NAME	=	push_swap
-SRCS	=	main.c push_swap.c check_args.c
+CC		=	gcc
+CFLAGS	=	-Wall -Wextra -Werror
+SRCS	=	main.c push_swap.c check_args.c initialize.c utils.c operations.c
 OBJ_DIR	=	obj
 OBJS	=	$(SRCS:%.c=$(OBJ_DIR)/%.o)
 LIBFT_DIR	=	./libft
