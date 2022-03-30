@@ -6,7 +6,7 @@
 /*   By: lalex-ku <lalex-ku@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 11:05:24 by lalex-ku          #+#    #+#             */
-/*   Updated: 2022/03/29 17:52:22 by lalex-ku         ###   ########.fr       */
+/*   Updated: 2022/03/30 16:11:47 by lalex-ku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h> // exit
 
 # define MAX_INT 2147483647
+# define MIN_INT -2147483648
 
 typedef struct s_stack
 {

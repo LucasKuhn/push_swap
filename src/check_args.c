@@ -6,7 +6,7 @@
 /*   By: lalex-ku <lalex-ku@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 10:43:07 by lalex-ku          #+#    #+#             */
-/*   Updated: 2022/03/29 11:06:10 by lalex-ku         ###   ########.fr       */
+/*   Updated: 2022/03/30 16:11:49 by lalex-ku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	str_is_int(const char *str)
 		i++;
 	}
 	number = ft_atol(str);
-	if (number > 2147483647 || number < -2147483648)
+	if (number > MAX_INT || number < MIN_INT)
 		return (0);
 	return (1);
 }
