@@ -6,7 +6,7 @@
 /*   By: lalex-ku <lalex-ku@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 10:54:23 by lalex-ku          #+#    #+#             */
-/*   Updated: 2022/03/29 10:55:27 by lalex-ku         ###   ########.fr       */
+/*   Updated: 2022/04/07 00:06:13 by lalex-ku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,21 @@ void	pb(t_stack **stack_a, t_stack **stack_b)
 	*stack_b = node;
 }
 
-void	pa(t_stack **stack_b)
+void	pa(t_stack **stack_a, t_stack **stack_b)
 {
-	if (!*stack_b)
-		return ;
+	t_stack	*node;
+
 	write(1, "pa\n", 3);
-	*stack_b = (*stack_b)->next;
+	node = *stack_b;
+	*stack_b = node->next;
+	if (!*stack_a)
+	{
+		node->next = NULL;
+		*stack_a = node;
+		return ;
+	}
+	node->next = *stack_a;
+	*stack_a = node;
 }
 
 void	ra(t_stack **stack_a)

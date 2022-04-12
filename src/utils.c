@@ -6,22 +6,31 @@
 /*   By: lalex-ku <lalex-ku@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 11:05:43 by lalex-ku          #+#    #+#             */
-/*   Updated: 2022/03/29 17:51:49 by lalex-ku         ###   ########.fr       */
+/*   Updated: 2022/04/07 00:12:28 by lalex-ku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./push_swap.h"
-#include <stdio.h>
 
-void	print_stack(t_stack *stack)
+void	free_stacks(t_stack **stack_a, t_stack **stack_b)
 {
-	printf("Printing\n");
-	while (stack)
-	{
-		printf("->(%i)\n", stack->data);
-		stack = stack->next;
+	t_stack	*node;
+	t_stack	*aux;
+
+	node = *stack_b;
+	while (node)
+	{	
+		aux = node;
+		node = node->next;
+		free(aux);
 	}
-	return ;
+	node = *stack_a;
+	while (node)
+	{	
+		aux = node;
+		node = node->next;
+		free(aux);
+	}
 }
 
 int	stack_len(t_stack **stack_a)

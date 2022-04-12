@@ -6,7 +6,7 @@
 /*   By: lalex-ku <lalex-ku@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 11:05:24 by lalex-ku          #+#    #+#             */
-/*   Updated: 2022/03/30 16:11:47 by lalex-ku         ###   ########.fr       */
+/*   Updated: 2022/04/07 00:06:39 by lalex-ku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,10 @@ int		push_swap(int argc, char const *argv[]);
 int		stack_len(t_stack **stack_a);
 void	stack_append(t_stack **stack, int number);
 void	initialize(int argc, const char **argv, t_stack **a, t_stack **b);
+void	free_stacks(t_stack **stack_a, t_stack **stack_b);
 int		is_sorted(t_stack **stack);
 void	pb(t_stack **stack_a, t_stack **stack_b);
-void	pa(t_stack **stack_b);
+void	pa(t_stack **stack_a, t_stack **stack_b);
 void	ra(t_stack **stack_a);
 void	rra(t_stack **stack_a);
 void	sa(t_stack **stack_a);

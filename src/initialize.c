@@ -6,7 +6,7 @@
 /*   By: lalex-ku <lalex-ku@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 10:43:24 by lalex-ku          #+#    #+#             */
-/*   Updated: 2022/03/29 17:50:28 by lalex-ku         ###   ########.fr       */
+/*   Updated: 2022/04/05 22:07:34 by lalex-ku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,11 @@ void	normalize(int **arr_p, int argc, const char *argv[])
 
 void	initialize(int argc, const char **argv, t_stack **a, t_stack **b)
 {
-	int	*arr;
+	int	*aux_arr;
 
 	*a = NULL;
 	*b = NULL;
-	normalize(&arr, argc, argv);
-	populate(a, arr);
+	normalize(&aux_arr, argc, argv);
+	populate(a, aux_arr);
+	free(aux_arr);
 }

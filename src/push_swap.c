@@ -6,7 +6,7 @@
 /*   By: lalex-ku <lalex-ku@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 11:12:48 by lalex-ku          #+#    #+#             */
-/*   Updated: 2022/03/30 17:00:06 by lalex-ku         ###   ########.fr       */
+/*   Updated: 2022/04/07 00:06:50 by lalex-ku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int	push_swap(int argc, const char *argv[])
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 
+	if (argc == 1)
+		return (EXIT_SUCCESS);
 	check_args(argc, argv);
 	initialize(argc, argv, &stack_a, &stack_b);
 	if (stack_len(&stack_a) <= 3)
@@ -36,7 +38,8 @@ int	push_swap(int argc, const char *argv[])
 			rra(&stack_a);
 	}
 	while (stack_b)
-		pa(&stack_b);
+		pa(&stack_a, &stack_b);
+	free_stacks(&stack_a, &stack_b);
 	return (EXIT_SUCCESS);
 }
 
