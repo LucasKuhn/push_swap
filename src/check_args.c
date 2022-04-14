@@ -6,7 +6,7 @@
 /*   By: lalex-ku <lalex-ku@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 10:43:07 by lalex-ku          #+#    #+#             */
-/*   Updated: 2022/04/05 22:07:26 by lalex-ku         ###   ########.fr       */
+/*   Updated: 2022/04/12 16:58:34 by lalex-ku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ int	str_is_int(const char *str)
 	long	number;
 	int		i;
 
-	if (ft_strlen(str) > 10)
+	if (ft_strlen(str) > 11)
 		return (0);
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == '-' && str[i + 1])
+		if (i == 0 && str[i] == '-' && str[i + 1])
 			i++;
 		if (!ft_isdigit(str[i]))
 			return (0);

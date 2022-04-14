@@ -6,7 +6,7 @@
 /*   By: lalex-ku <lalex-ku@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 10:43:24 by lalex-ku          #+#    #+#             */
-/*   Updated: 2022/04/05 22:07:34 by lalex-ku         ###   ########.fr       */
+/*   Updated: 2022/04/12 17:38:18 by lalex-ku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	normalize(int **arr_p, int argc, const char *argv[])
 		lowest = MAX_INT;
 		while (i < argc)
 		{
-			if (!(*arr_p)[i - 1] && atoi(argv[i]) < lowest)
+			if (!(*arr_p)[i - 1] && atoi(argv[i]) <= lowest)
 			{
 				lowest_pos = i;
 				lowest = atoi(argv[i]);

@@ -1,14 +1,13 @@
 NAME	=	push_swap
 CC		=	gcc
-CFLAGS	=	-Wall -Wextra -Werror
-SRCS	=	main.c push_swap.c check_args.c initialize.c utils.c operations.c
+CFLAGS	=	-Wall -Wextra -Werror -g
+SRCS	=	main.c push_swap.c check_args.c initialize.c utils.c operations.c bubble_sort.c radix_sort.c tiny_sort.c
 OBJ_DIR	=	obj
 OBJS	=	$(SRCS:%.c=$(OBJ_DIR)/%.o)
 LIBFT_DIR	=	./libft
 LIBFT_A	=	$(LIBFT_DIR)/libft.a
 LIBFT_FLAG	=	-L./libft -lft
 VPATH	=	src
-
 
 all: $(NAME)
 

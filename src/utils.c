@@ -19,14 +19,14 @@ void	free_stacks(t_stack **stack_a, t_stack **stack_b)
 
 	node = *stack_b;
 	while (node)
-	{	
+	{
 		aux = node;
 		node = node->next;
 		free(aux);
 	}
 	node = *stack_a;
 	while (node)
-	{	
+	{
 		aux = node;
 		node = node->next;
 		free(aux);

@@ -6,7 +6,7 @@
 /*   By: lalex-ku <lalex-ku@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 11:05:24 by lalex-ku          #+#    #+#             */
-/*   Updated: 2022/04/07 00:06:39 by lalex-ku         ###   ########.fr       */
+/*   Updated: 2022/04/13 16:32:47 by lalex-ku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,8 @@ void	ra(t_stack **stack_a);
 void	rra(t_stack **stack_a);
 void	sa(t_stack **stack_a);
 int		find_smallest_position(t_stack **stack_a, t_stack **stack_b);
+void	tiny_sort(t_stack **stack_a, t_stack **stack_b);
+void	bubble_sort(t_stack **stack_a, t_stack **stack_b);
+void	radix_sort(t_stack **stack_a, t_stack **stack_b);
 
 #endif
