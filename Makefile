@@ -22,8 +22,13 @@ fclean: clean
 
 re: fclean all
 
+ifeq ($(shell uname),Darwin)
 check: 
-	@arg=$(ARG) && ./push_swap $$arg | ./checker_Mac $$arg
+	arg=$(ARG) && ./push_swap $$arg | ./checker_Mac $$arg
+else
+check: 
+	arg=$(ARG) && ./push_swap $$arg | ./checker_linux $$arg
+endif
 
 run:
 	./push_swap $(ARG)

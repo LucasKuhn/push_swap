@@ -6,7 +6,7 @@
 /*   By: lalex-ku <lalex-ku@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 10:43:07 by lalex-ku          #+#    #+#             */
-/*   Updated: 2022/04/12 16:58:34 by lalex-ku         ###   ########.fr       */
+/*   Updated: 2022/04/19 16:16:25 by lalex-ku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,10 @@ int	str_is_int(const char *str)
 
 int	arr_includes(int *arr, int num)
 {
+	static int	has_zero;
+
+	if (num == 0 && has_zero++ != 0)
+		return (1);
 	while (*arr)
 	{
 		if (*arr == num)
@@ -64,7 +68,7 @@ void	check_args(int argc, char const *argv[])
 			exit_error();
 		i++;
 	}
-	arr = malloc(sizeof(int) * (argc + 1));
+	arr = ft_calloc((argc + 1), sizeof(int));
 	i = 1;
 	while (i < argc)
 	{
