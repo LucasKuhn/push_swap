@@ -8,6 +8,7 @@ LIBFT_DIR	=	./libft
 LIBFT_A	=	$(LIBFT_DIR)/libft.a
 LIBFT_FLAG	=	-L./libft -lft
 VPATH	=	src
+ARG		=	$$(seq 1 200 | shuf | tr '\n' ' ')
 
 all: $(NAME)
 
@@ -20,6 +21,12 @@ fclean: clean
 	@echo "removed executable"
 
 re: fclean all
+
+check: 
+	@arg=$(ARG) && ./push_swap $$arg | ./checker_Mac $$arg
+
+run:
+	./push_swap $(ARG)
 
 $(NAME): $(LIBFT_A) $(OBJ_DIR) $(OBJS)
 	$(CC) $(OBJS) -o $(NAME) $(LIBFT_FLAG)

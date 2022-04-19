@@ -6,7 +6,7 @@
 /*   By: lalex-ku <lalex-ku@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 11:12:48 by lalex-ku          #+#    #+#             */
-/*   Updated: 2022/04/13 16:35:07 by lalex-ku         ###   ########.fr       */
+/*   Updated: 2022/04/19 13:30:40 by lalex-ku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	push_swap(int argc, const char *argv[])
 {
-	t_stack *stack_a;
-	t_stack *stack_b;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 
 	if (argc == 1)
 		return (EXIT_SUCCESS);
